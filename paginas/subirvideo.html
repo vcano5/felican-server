@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuevo submit</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<style>
+		.container {
+			padding: 2vh;
+		}
+		* {
+			font-size: 3vh;
+		}
+	</style>
+</head>
+<body>
+	<!-- <form action="/subirVideo" method="POST">
+		<div class="mb-3">
+			<label for="formFile" class="form-label">Default file input example</label>
+			<input class="form-control" type="file" id="formFile" name="formFile">
+		  </div>
+		  <button class="btn btn-xl btn-primary" type="submit">Submit</button>
+	</form> -->
+	<form action="/subirVideo" class="container" method="post" enctype="multipart/form-data">
+		<table class="table table-borderless">
+			<tbody>
+				<tr>
+					<td><label class="w-auto" for="nombre">Ingresa tu nombre</label></td>
+					<td><input class="w-100" type="text" name="nombre" required></td>
+				</tr>
+				<tr>
+					<td><label class="w-auto" for="nombre">Ingresa tu matricula</label></td>
+					<td><input class="w-100" type="number" min="1" name="matricula" required></td>
+				</tr>
+				<tr>
+					<td><label class="w-auto" for="nombre">Ingresa una descripción</label></td>
+					<td><textarea class="w-100"type="text" name="desc" required> </textarea></td>
+				</tr>
+				<tr>
+					<td><label class="w-auto" for="FormControlFile1">Adjunta un video</label></td>
+					<td class="w-100"><input required accept=".mp4" class="btn btn-secondary w-100" type="file" class="form-control-file" id="FormControlFile1" name="FormControlFile1"></td>
+				</tr>
+				<tr class="d-flex justify-content-between">
+					<td colspan="2"><button type="submit" class="btn btn-primary mb-2">Enviar</button><button type="button" class="btn btn-danger mb-2" id="uno">Eliminar</button></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		
+		<br>
+		
+		
+		<br>
+		
+		
+		<br>
+		<div class="form-group">
+			
+			<br>
+			
+		</div>
+		<div class="form-group">
+			
+			
+		</div>
+	</form>
+</body>
+</html>

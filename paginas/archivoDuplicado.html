@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuevo submit</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<style>
+		.container {
+			padding: 5rem;
+		}
+		* {
+			font-size: 1.5rem;
+		}
+	</style>
+</head>
+<body class="bg-danger">
+	<div class="container">
+		<p class="text-white" style="text-align: center;">El archivo ya existe</p>
+		<button class="btn btn-dark w-100" onclick="goBack()">REGRESAR</button>
+	</div>
+</body>
+</html>
+
+<script>
+	function goBack() {
+		window.history.back()
+	}
+</script>
