@@ -59,7 +59,6 @@ function uploadFile(file, callback) {
 	})
 }
 
-console.log(process.env.ACCESSKEY)
 app.listen((process.env.PORT || 3000), () => {
 	console.log('Running on port: ' + (process.env.PORT || 3000))
 })
@@ -69,7 +68,8 @@ app.use(fileUpload({
 }));
 
 app.get('/', (req, res) => {
-	res.sendStatus(200)
+	//res.sendStatus(200)
+	res.redirect('https://main.d2edn3ibq43045.amplifyapp.com/');
 })
 
 app.get('/subirVideo', (req, res) => {
@@ -99,17 +99,6 @@ app.post('/subirVideo', (req, res) => {
 			})
 		}
 	})
-})
-
-app.get('/duplicado', (req, res) => {
-	res.sendFile(__dirname + '/paginas/archivoDuplicado.html')
-})
-
-
-app.get('/listaDeVideos', (req, res) => {
-	var archivos = fs.readdirSync(__dirname + '/archivos/');
-	console.log(archivos);
-	res.send(archivos)
 })
 
 app.get('/api/videos', (req, res) => {
