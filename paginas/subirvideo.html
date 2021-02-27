@@ -40,11 +40,34 @@
 					<td><textarea class="w-100"type="text" name="desc" required> </textarea></td>
 				</tr>
 				<tr>
+					<td><label class="w-auto" for="nombre">Selecciona un proyecto</label></td>
+					<td>
+						<select class="form-select" name="proyecto">
+							<option value="Felicanalis" selected>Felicanalis</option>
+							<option value="Matrialis">Matrialis</option>
+							<option value="TrenzandoNombres">Trenzando Nombres</option>
+							<option value="TrenzandoCuentos">Trenzando Cuentos</option>
+							<option value="TrenzandoLenguas">Trenzando Lenguas</option>
+							<option value="DesiertoVerdeEnCasa">Desierto Verde en Casa</option>
+							<option value="DesiertoVerdeEnLaEscuela">Desierto Verde en la Escuela</option>
+							<option value="DesiertoVerdeEnLosParques">Desierto Verde en los Parques</option>
+							<option value="DesiertoVerdeEnLasIglesias">Desierto Verde en las Iglesias</option>
+							<option value="COVIDA20">COVIDA 20</option>
+							<option value="COVIDA21">COVIDA 21</option>
+
+						  </select>
+					</td>
+				</tr>
+				<tr>
 					<td><label class="w-auto" for="FormControlFile1">Adjunta un video</label></td>
 					<td class="w-100"><input required accept=".mp4" class="btn btn-secondary w-100" type="file" class="form-control-file" id="FormControlFile1" name="FormControlFile1"></td>
 				</tr>
-				<tr class="d-flex justify-content-between">
-					<td colspan="2"><button type="submit" class="btn btn-primary mb-2">Enviar</button><button type="button" class="btn btn-danger mb-2" id="uno">Eliminar</button></td>
+
+				<tr class="justify-content-between" >
+					<td colspan="2" style="width: 100%; text-align: center;">
+						<button type="submit" class="btn btn-primary">Enviar</button>
+						<button type="button" class="btn btn-danger" id="uno">Eliminar</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>

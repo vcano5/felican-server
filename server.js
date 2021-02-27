@@ -91,14 +91,20 @@ app.post('/subirVideo', (req, res) => {
 					matricula: req.body.matricula,
 					descripcion: req.body.desc,
 					videoUrl: ubicacion,
-					creado: new Date()
+					creado: new Date(),
+					proyecto: req.body.proyecto
 				}
 				agregarVideo(obj, () => {
-					res.sendFile(__dirname + '/paginas/agregadoConExito.html')
+					res.redirect(`/videoSubido?loc=${encodeURI(obj.videoUrl)}`)
+					//res.sendFile(__dirname + '/paginas/agregadoConExito.html')
 				})
 			})
 		}
 	})
+})
+
+app.get('/videoSubido', (req, res) => {
+	res.sendFile(__dirname + '/paginas/agregadoConExito.html')
 })
 
 app.get('/api/videos', (req, res) => {

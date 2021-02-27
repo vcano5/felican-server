@@ -7,18 +7,49 @@
 	<title>Nuevo submit</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2185595718.js" crossorigin="anonymous"></script>
 	<style>
 		.container {
 			padding: 5rem;
 		}
-		* {
-			font-size: 1.5rem;
+
+		@media (max-width: 600px) {
+			#copiar {
+				display: none;
+				font-size: .5rem;
+			}
+		}
+
+		@media (max-width: 220px) {
+			.container {
+				padding: .5rem;
+			}
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<p>Se agrego con exito el video</p>
+		<p style="font-size: 5vh;">Se agrego con exito el video</p>
+	</div>
+	<div class="input-group mb-3 p-4 fixed-bottom">
+		<span class="input-group-text">URL</span>
+		<input type="text" class="form-control" id="loc" >
+		<span class="input-group-text"><button class="btn btn-dark" onclick="cortaPapeles()"><i class="fas fa-clipboard"></i> <span id="copiar">COPIAR</span> </button></span>
 	</div>
 </body>
 </html>
+
+<script>
+	var input = document.querySelector('input#loc');
+
+	function cortaPapeles() {
+		var cT = input;
+		cT.select();
+		cT.setSelectionRange(0, 99999);
+		document.execCommand('copy');
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		input.value = new URLSearchParams(window.location.search).get('loc')
+	})
+</script>
